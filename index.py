@@ -97,8 +97,8 @@ class LoginForm(QtWidgets.QWidget, Ui_Form):
 
         self.cursor.execute("SELECT COUNT(*) FROM users")
         if self.cursor.fetchone()[0] == 0:
-            static_username = 'admin_toko'
-            static_password = 'toko_sempurna'
+            static_username = 'farhan'
+            static_password = '123'
             try:
                 self.cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (static_username, static_password))
                 self.conn.commit()
